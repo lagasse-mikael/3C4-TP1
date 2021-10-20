@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TP1_Base_Prof
+namespace TP1_Base_Prof.Windows
 {
     /// <summary>
-    /// Logique d'interaction pour BetterOmnivox.xaml
+    /// Logique d'interaction pour Horaire.xaml
     /// </summary>
-    public partial class Connexion : Window
+    public partial class Horaire : Window
     {
-        public Connexion()
+        public Horaire()
         {
             InitializeComponent();
         }

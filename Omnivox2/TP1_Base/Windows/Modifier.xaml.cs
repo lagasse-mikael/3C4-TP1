@@ -17,11 +17,5 @@ namespace TP1_Base_Prof
     /// <summary>
     /// Logique d'interaction pour BetterOmnivox.xaml
     /// </summary>
-    public partial class Connexion : Window
-    {
-        public Connexion()
-        {
-            InitializeComponent();
-        }
-    }
+
 }

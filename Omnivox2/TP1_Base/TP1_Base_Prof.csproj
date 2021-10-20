@@ -64,6 +64,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Horaire.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Modifier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\StudentSelectedWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +92,12 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="Windows\BetterOmnivox.xaml.cs">
       <DependentUpon>BetterOmnivox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Horaire.xaml.cs">
+      <DependentUpon>Horaire.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Modifier.xaml.cs">
+      <DependentUpon>Modifier.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StudentSelectedWindow.xaml.cs">
       <DependentUpon>StudentSelectedWindow.xaml</DependentUpon>
