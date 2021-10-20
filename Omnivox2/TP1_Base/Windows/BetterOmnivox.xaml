@@ -5,10 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP1_Base_Prof"
         mc:Ignorable="d"
-        Title="BetterOmnivox" Height="450" Width="800">
+        Title="BetterOmnivox" Height="450" Width="1000">
     <Grid>
 
-        <Label x:Name="userLoggedIn" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Mikael Lagasse</Label>
+        <TextBlock x:Name="userLoggedIn" FontSize="24" HorizontalAlignment="Right">Mikael Lagasse</TextBlock>
+        <TextBlock x:Name="selectedItemName" FontSize="24" HorizontalAlignment="Right" Margin="0 30 0 0 ">selected item</TextBlock>
+        <TextBlock x:Name="selectedItemID" FontSize="24" HorizontalAlignment="Right" Margin="0 60 0 0 ">null</TextBlock>
         
+        <StackPanel>
+            <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="0 75 0 0" >Cours du prof en question :</TextBlock>
+            <ListBox SelectionChanged="listeCours_SelectionChanged"  x:Name="listeCours" Width="500" HorizontalAlignment="Left">
+            </ListBox>
+
+            <TextBlock FontSize="19" HorizontalAlignment="Left" >Eleves frequentant le cours en question :</TextBlock>
+            <ListView  x:Name="listeEleves" Width="500" HorizontalAlignment="Left">
+            </ListView>
+        </StackPanel>
+
     </Grid>
 </Window>

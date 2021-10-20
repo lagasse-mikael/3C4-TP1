@@ -19,16 +19,16 @@ namespace TP1_Base_Prof
 
         /*  On vas faire les profs avant   */
 
-        //public Dictionary<int, Student> Students { get => _students; }
-        //private Dictionary<int, Student> _students = new Dictionary<int, Student>()
-        //{
-        //    { 21000123, new Student() { Id = 21000123, FirstName = "Paul", LastName = "Berube", Password = "pberube" } },
-        //    { 21000456, new Student() { Id = 21000456, FirstName = "Mathieu", LastName = "Gagnon", Password = "mgagnon" } },
-        //    { 21000789, new Student() { Id = 21000789, FirstName = "Robert", LastName = "Simard", Password = "rsimard" } },
-        //    { 19887766, new Student() { Id = 19887766, FirstName = "Elise", LastName = "Huard", Password = "ehuard" } },
-        //    { 19559977, new Student() { Id = 19559977, FirstName = "Marie", LastName = "Sauve", Password = "msauve" } },
-        //    { 18996644, new Student() { Id = 18996644, FirstName = "Sylvie", LastName = "Michaud", Password = "smichaud" } },
-        //};
+        public Dictionary<int, Student> Students { get => _students; }
+        private Dictionary<int, Student> _students = new Dictionary<int, Student>()
+        {
+            { 21000123, new Student() { Id = 21000123, FirstName = "Paul", LastName = "Berube", Password = "pberube" } },
+            { 21000456, new Student() { Id = 21000456, FirstName = "Mathieu", LastName = "Gagnon", Password = "mgagnon" } },
+            { 21000789, new Student() { Id = 21000789, FirstName = "Robert", LastName = "Simard", Password = "rsimard" } },
+            { 19887766, new Student() { Id = 19887766, FirstName = "Elise", LastName = "Huard", Password = "ehuard" } },
+            { 19559977, new Student() { Id = 19559977, FirstName = "Marie", LastName = "Sauve", Password = "msauve" } },
+            { 18996644, new Student() { Id = 18996644, FirstName = "Sylvie", LastName = "Michaud", Password = "smichaud" } },
+        };
 
         public Dictionary<int, Teacher> Teachers { get => _teachers; }
         private Dictionary<int, Teacher> _teachers = new Dictionary<int, Teacher>()
