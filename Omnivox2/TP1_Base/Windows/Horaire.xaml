@@ -1,0 +1,139 @@
+﻿<Window x:Class="TP1_Base_Prof.Windows.Horaire"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP1_Base_Prof.Windows"
+        mc:Ignorable="d"
+        Title="Horaire" Height="800" Width="1000">
+
+
+
+    <StackPanel Background="#23272a" >
+
+
+        
+            <StackPanel.Resources>
+
+                <Style x:Key="TextWhite" TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Margin" Value="31 10 10 10"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+
+                <Style x:Key="roundTextBox" TargetType="{x:Type TextBox}">
+                    <Setter Property="Background" Value="#FF181819"></Setter>
+                    <Setter Property="Width" Value="125"></Setter>
+
+                    <Style.Resources >
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+
+
+                        </Style>
+                    </Style.Resources>
+                </Style>
+
+                <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#23272a"/>
+                    <Setter Property="Padding" Value="10 10 10 10"/>
+                     <Setter Property="Margin" Value="21"/>
+                <Setter Property="Template" Value="{DynamicResource WhiteButtonStyle}"/>
+                    <Style.Resources >
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+
+
+
+
+                        </Style>
+                    </Style.Resources>
+
+                </Style>
+
+                <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
+
+                    <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
+
+                    <Setter Property="Background" Value="#23272a"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Style>
+
+
+            <Style x:Key="ComboBoxParam" TargetType="{x:Type ComboBox}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Width" Value="61"/>
+
+
+
+
+
+            </Style>
+            </StackPanel.Resources>
+        
+        
+        
+            <!--Grille de 13 row par 6 colonne-->
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <WrapPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Style="{StaticResource TextWhite}">Session : </TextBlock>
+            <ComboBox Style="{StaticResource ComboBoxParam}">
+                <ComboBoxItem>A21</ComboBoxItem>
+                <ComboBoxItem>H20</ComboBoxItem>
+                <ComboBoxItem>A20</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Style="{StaticResource TextWhite}">Local :</TextBlock>
+            <ComboBox Style="{StaticResource ComboBoxParam}">
+                <ComboBoxItem>D134</ComboBoxItem>
+                <ComboBoxItem>D136</ComboBoxItem>
+                <ComboBoxItem>D139</ComboBoxItem>
+            </ComboBox>
+            
+            <TextBlock Style="{StaticResource TextWhite}">Cours :</TextBlock>
+            <ComboBox Style="{StaticResource ComboBoxParam}">
+                <ComboBoxItem>1C5 - Gr. 001</ComboBoxItem>
+                <ComboBoxItem>3C4- Gr. 001</ComboBoxItem>
+                <ComboBoxItem>3C4- Gr. 002</ComboBoxItem>
+            </ComboBox>
+
+            <Button Content="Ajouter une leçon" Style="{StaticResource ButtonStyle}" Margin="10" />
+
+            <Button Content=" Supprimer leçon" Style="{StaticResource ButtonStyle}" Margin="10" />
+        </WrapPanel>
+
+    </StackPanel>
+        
+        
+  
+</Window>
