@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TP1_Base_Prof
+namespace TP1_Base_Prof.Windows
 {
     /// <summary>
-    /// Logique d'interaction pour BetterOmnivox.xaml
+    /// Logique d'interaction pour Test.xaml
     /// </summary>
-    public partial class Connexion : Window
+    public partial class Test : Window
     {
-        public Connexion()
+        public Test()
         {
             InitializeComponent();
-        }
-
-        private void UserIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
