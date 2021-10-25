@@ -12,56 +12,69 @@
     <StackPanel Background="#23272a" >
 
 
-        
-            <StackPanel.Resources>
 
-                <Style x:Key="TextWhite" TargetType="{x:Type TextBlock}">
-                    <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Margin" Value="31 10 10 10"/>
+        <StackPanel.Resources>
+
+            <Style x:Key="TextWhite" TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Margin" Value="31 10 10 10"/>
                 <Setter Property="FontSize" Value="30"/>
+
+
+
             </Style>
 
-                <Style x:Key="roundTextBox" TargetType="{x:Type TextBox}">
-                    <Setter Property="Background" Value="#FF181819"></Setter>
-                    <Setter Property="Width" Value="125"></Setter>
-
-                    <Style.Resources >
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="10"/>
-                            <Setter Property="BorderBrush" Value="White"/>
+            <Style x:Key="TextWhiteWeekDay" TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Margin" Value="31 10 31 10"/>
+                <Setter Property="FontSize" Value="25"/>
 
 
-                        </Style>
-                    </Style.Resources>
-                </Style>
 
-                <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Foreground" Value="#23272a"/>
-                    <Setter Property="Padding" Value="10 10 10 10"/>
-                     <Setter Property="Margin" Value="21"/>
+            </Style>
+
+            <Style x:Key="roundTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="Background" Value="#FF181819"></Setter>
+                <Setter Property="Width" Value="125"></Setter>
+
+                <Style.Resources >
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="BorderBrush" Value="White"/>
+
+
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Foreground" Value="#23272a"/>
+                <Setter Property="Padding" Value="10 10 10 10"/>
+                <Setter Property="Margin" Value="21"/>
                 <Setter Property="Template" Value="{DynamicResource WhiteButtonStyle}"/>
-                    <Style.Resources >
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="20"/>
-                            <Setter Property="BorderBrush" Value="White"/>
+                <Style.Resources >
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                        <Setter Property="BorderBrush" Value="White"/>
 
 
 
 
-                        </Style>
-                    </Style.Resources>
+                    </Style>
+                </Style.Resources>
 
-                </Style>
+            </Style>
 
-                <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
+            <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
 
-                    <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
+                <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
 
-                    <Setter Property="Background" Value="#23272a"/>
-                    <Setter Property="Foreground" Value="White"/>
-                </Style>
+                <Setter Property="Background" Value="#23272a"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
 
 
             <Style x:Key="ComboBoxParam" TargetType="{x:Type ComboBox}">
@@ -73,12 +86,12 @@
 
 
             </Style>
-            </StackPanel.Resources>
-        
-        
-        
-            <!--Grille de 13 row par 6 colonne-->
-        
+        </StackPanel.Resources>
+
+
+
+        <!--Grille de 13 row par 6 colonne-->
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -105,8 +118,9 @@
             </Grid.RowDefinitions>
         </Grid>
 
+
         <WrapPanel Grid.Row="0" Grid.Column="0">
-            <TextBlock Style="{StaticResource TextWhite}">Session : </TextBlock>
+            <TextBlock Style="{StaticResource TextWhite}">Session :</TextBlock>
             <ComboBox Style="{StaticResource ComboBoxParam}">
                 <ComboBoxItem>A21</ComboBoxItem>
                 <ComboBoxItem>H20</ComboBoxItem>
@@ -119,7 +133,7 @@
                 <ComboBoxItem>D136</ComboBoxItem>
                 <ComboBoxItem>D139</ComboBoxItem>
             </ComboBox>
-            
+
             <TextBlock Style="{StaticResource TextWhite}">Cours :</TextBlock>
             <ComboBox Style="{StaticResource ComboBoxParam}">
                 <ComboBoxItem>1C5 - Gr. 001</ComboBoxItem>
@@ -132,8 +146,48 @@
             <Button Content=" Supprimer leçon" Style="{StaticResource ButtonStyle}" Margin="10" />
         </WrapPanel>
 
+        <!--Width="175" Height="60"-->
+        <!--<WrapPanel Grid.Row="1" Grid.Column="1" >
+
+            <TextBlock ></TextBlock>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="1" Grid.Column="2">
+
+            <Border BorderThickness="0 0 3 3" BorderBrush="White">
+            
+            <TextBlock Style="{StaticResource TextWhiteWeekDay }">Lundi</TextBlock>
+
+            </Border>
+            
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="1" Grid.Column="3">
+
+
+            <Border BorderThickness="3 0 0 0" BorderBrush="White">
+                
+                <TextBlock Style="{StaticResource TextWhiteWeekDay }">Lundi</TextBlock>
+                
+            </Border>
+            
+        </WrapPanel>-->
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <ToggleButton Width="175" Height="60"></ToggleButton>
+        </StackPanel>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+        <ToggleButton Width="175" Height="60"></ToggleButton>
+
     </StackPanel>
-        
-        
-  
+
+
 </Window>
