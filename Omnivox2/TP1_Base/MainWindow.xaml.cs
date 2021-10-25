@@ -29,9 +29,9 @@ namespace TP1_Base_Prof
 
             // Get values in project by using App.Current properties
             ProductListView.Items.Clear();
-            foreach (var student in App.Current.Teachers.Values)
+            foreach (var teacher in App.Current.Teachers.Values)
             {
-                ProductListView.Items.Add(student);
+                ProductListView.Items.Add(teacher);
             }
 
             ProductListView.SelectedItem = 0;
@@ -51,11 +51,13 @@ namespace TP1_Base_Prof
 
         private void ProductListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var student = ProductListView.SelectedItem as Teacher;
-            if (student != null)
+            var teacher = ProductListView.SelectedItem as Teacher;
+            if (teacher != null)
             {
-                var window = new StudentSelectedWindow(student);
-                window.Show();
+                // var window = new StudentSelectedWindow(teacher);
+                // window.Show();
+                var betterOmnivox = new BetterOmnivox(teacher);
+                betterOmnivox.Show();
             }
         }
 

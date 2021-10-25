@@ -36,15 +36,16 @@ namespace TP1_Base_Prof
         private void listeCours_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             listeEleves.Items.Clear();
+            listeEvaluation.Items.Clear();
 
             coursObj = App.Current.Courses[listeCours.SelectedIndex];
 
             string[] coursEnTexte = listeCours.SelectedItem.ToString().Split('-');
-            
+
             selectedItemID.Text = coursEnTexte[0].Trim();
             selectedItemName.Text = coursEnTexte[1].Trim();
 
-            foreach(var eleveID in coursObj.StudentIds)
+            foreach (var eleveID in coursObj.StudentIds)
             {
                 Student eleveObj;
                 App.Current.Students.TryGetValue(eleveID, out eleveObj);
@@ -52,6 +53,20 @@ namespace TP1_Base_Prof
                 listeEleves.Items.Add($"{eleveObj.FirstName} {eleveObj.LastName} - {eleveObj.Id}");
             }
 
+            foreach (var eval in coursObj.Evaluations)
+            {
+                listeEvaluation.Items.Add($"{eval.Name} , vaut pour {eval.Value} %");
+            }
+
+        }
+
+        private void addEvaluation_Click(object sender, RoutedEventArgs e)
+        {
+            if (listeCours.SelectedIndex != -1)
+            {
+                var ajoutEvaluationWindow = new NewEvaluation(App.Current.Courses[listeCours.SelectedIndex]);
+                ajoutEvaluationWindow.Show();
+            }
         }
     }
 }

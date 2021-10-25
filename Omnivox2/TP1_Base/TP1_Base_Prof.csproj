@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\NewEvaluation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\StudentSelectedWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="Windows\Modifier.xaml.cs">
       <DependentUpon>Modifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewEvaluation.xaml.cs">
+      <DependentUpon>NewEvaluation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StudentSelectedWindow.xaml.cs">
       <DependentUpon>StudentSelectedWindow.xaml</DependentUpon>

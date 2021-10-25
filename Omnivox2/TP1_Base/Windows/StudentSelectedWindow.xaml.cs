@@ -46,6 +46,7 @@ namespace TP1_Base_Prof
         {
         }
 
+        // On va jamais rentrer ici , car on utilise pu ce XAML
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             // Ici on change ca un peu , on va ouvrir 'BetterOmnivox' avec le prof en question !
