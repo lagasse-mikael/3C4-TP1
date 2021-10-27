@@ -30,32 +30,8 @@
                     </Style>
                 </Style.Resources>
             </Style>
-
-            <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-                <Setter Property="Background" Value="White"/>
-                <Setter Property="Foreground" Value="#23272a"/>
-                <Setter Property="Padding" Value="10 10 10 10"/>
-                <Setter Property="Template" Value="{DynamicResource WhiteButtonStyle}"/>
-                <Style.Resources >
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="BorderBrush" Value="White"/>
-
-
-
-
-                    </Style>
-                </Style.Resources>
-
-            </Style>
-
-            <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
-
-                <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
-
-                <Setter Property="Background" Value="#23272a"/>
-                <Setter Property="Foreground" Value="White"/>
-            </Style>
+            
+            <!--J'ai bouger les styles des buttons-->
         </StackPanel.Resources>
 
         <Grid>
@@ -68,8 +44,8 @@
         </Grid>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Étudiant" Style="{StaticResource ButtonStyle}" Margin="10" />
-            <Button Content="Enseignant" Style="{StaticResource DarkButton}" Margin="10"/>
+            <Button x:Name="choixLoginEtudiant" Content="Étudiant" Style="{StaticResource ButtonStyle}" Margin="10" Click="choixLogin_Click"/>
+            <Button x:Name="choixLoginProf" Content="Enseignant" Style="{StaticResource DarkButton}" Margin="10" Click="choixLogin_Click"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin=" 30 0 0 0">
@@ -84,7 +60,7 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Se connecter" Style="{StaticResource ButtonStyle}" Margin="10"/>
+            <Button Content="Se connecter" Style="{StaticResource ButtonStyle}" Margin="10" Click="Login"/>
             <Button Content="Mot de passe oublié" Style="{StaticResource DarkButton}" Margin="10"/>
         </WrapPanel>
 

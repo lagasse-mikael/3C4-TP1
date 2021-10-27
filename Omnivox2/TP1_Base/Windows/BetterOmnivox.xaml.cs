@@ -35,15 +35,20 @@ namespace TP1_Base_Prof
 
         private void listeCours_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            listeEleves.Items.Clear();
-            listeEvaluation.Items.Clear();
-
             coursObj = App.Current.Courses[listeCours.SelectedIndex];
 
             string[] coursEnTexte = listeCours.SelectedItem.ToString().Split('-');
 
             selectedItemID.Text = coursEnTexte[0].Trim();
             selectedItemName.Text = coursEnTexte[1].Trim();
+
+            refreshLists();
+        }
+
+        public void refreshLists()
+        {
+            listeEleves.Items.Clear();
+            listeEvaluation.Items.Clear();
 
             foreach (var eleveID in coursObj.StudentIds)
             {
@@ -65,8 +70,16 @@ namespace TP1_Base_Prof
             if (listeCours.SelectedIndex != -1)
             {
                 var ajoutEvaluationWindow = new NewEvaluation(App.Current.Courses[listeCours.SelectedIndex]);
+
+                // Ca fait quoi au juste?
+                ajoutEvaluationWindow.Closed += NewEvaluationClosed;
                 ajoutEvaluationWindow.Show();
             }
+        }
+
+        public void NewEvaluationClosed(object sender, System.EventArgs e)
+        {
+            refreshLists();
         }
     }
 }

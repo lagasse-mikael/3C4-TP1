@@ -19,6 +19,8 @@ namespace TP1_Base_Prof
     /// </summary>
     public partial class Connexion : Window
     {
+        private Dictionary<int, Student> infos_etudiants = App.Current.Students;
+        private bool isEtudiant = true;
         public Connexion()
         {
             InitializeComponent();
@@ -26,6 +28,29 @@ namespace TP1_Base_Prof
 
         private void UserIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void Login(object sender, RoutedEventArgs e)
+        {
+            // Icitte
+        }
+
+        private void choixLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnCast = (Button)sender;
+
+            if(btnCast.Name == "choixLoginEtudiant")
+            {
+                btnCast.Style = (Style)App.Current.Resources["ButtonStyle"];
+                choixLoginProf.Style = (Style)App.Current.Resources["DarkButton"];
+            }
+            else
+            {
+                btnCast.Style = (Style)App.Current.Resources["ButtonStyle"];
+                choixLoginEtudiant.Style = (Style)App.Current.Resources["DarkButton"];
+            }
+
 
         }
     }

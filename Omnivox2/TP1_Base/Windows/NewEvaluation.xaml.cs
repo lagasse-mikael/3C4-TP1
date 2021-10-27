@@ -39,8 +39,8 @@ namespace TP1_Base_Prof
                 coursModif.Evaluations.Add(new Evaluation { Name = nomEval.Text,Value = Convert.ToInt32(valEval.Text)});
 
                 MessageBox.Show("L'evaluation a ete ajouter!", "Evaluation ajouter", MessageBoxButton.OK, MessageBoxImage.Information);
-                
-                // Ajouter l'affaire pour pouvoir fermer la fenetre direct apres.
+
+                this.Close();
             }
             catch(Exception exception)
             {

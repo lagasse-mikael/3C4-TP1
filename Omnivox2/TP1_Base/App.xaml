@@ -60,6 +60,31 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
+        <!--Notre section a nous autres-->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#23272a"/>
+            <Setter Property="Padding" Value="10 10 10 10"/>
+            <Setter Property="Template" Value="{DynamicResource WhiteButtonStyle}"/>
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="BorderBrush" Value="White"/>
 
+
+
+
+                </Style>
+            </Style.Resources>
+
+        </Style>
+
+        <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
+
+            <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
+
+            <Setter Property="Background" Value="#23272a"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

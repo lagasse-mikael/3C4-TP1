@@ -37,7 +37,7 @@ namespace TP1_Base_Prof
             ProductListView.SelectedItem = 0;
 
             // Close all windows except a new window
-            //var window = new MyNewWindow();
+            //var window = new BetterOmnivox(null);
             //window.Show();
 
             //for (int i = App.Current.Windows.Count - 1; i >= 0; i--)
