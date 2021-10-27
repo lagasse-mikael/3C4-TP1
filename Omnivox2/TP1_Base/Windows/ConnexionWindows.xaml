@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP1_Base_Prof"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="350">
+        Title="MainWindow" Height="225" Width="350">
     <Window.Resources>
 
     </Window.Resources>
@@ -58,32 +58,25 @@
             </Style>
         </StackPanel.Resources>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-        </Grid>
+        
 
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+        <WrapPanel HorizontalAlignment="Center">
             <Button Content="Étudiant" Style="{StaticResource ButtonStyle}" Margin="10" />
             <Button Content="Enseignant" Style="{StaticResource DarkButton}" Margin="10"/>
         </WrapPanel>
 
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin=" 30 0 0 0">
+        <WrapPanel  HorizontalAlignment="Center" Margin=" 30 0 0 0">
             <TextBlock Style="{StaticResource TextWhite}">User :</TextBlock>
             <TextBox x:Name="UserIdTextBox" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBox}" TextChanged="UserIdTextBox_TextChanged"></TextBox>
 
         </WrapPanel>
 
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 10 0 0">
+        <WrapPanel HorizontalAlignment="Center" Margin="0 10 0 0">
             <TextBlock Style="{StaticResource TextWhite}">Password :</TextBlock>
             <TextBox x:Name="StudentFirstNameTextBlock" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBox}"></TextBox>
         </WrapPanel>
 
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+        <WrapPanel HorizontalAlignment="Center">
             <Button Content="Se connecter" Style="{StaticResource ButtonStyle}" Margin="10"/>
             <Button Content="Mot de passe oublié" Style="{StaticResource DarkButton}" Margin="10"/>
         </WrapPanel>
