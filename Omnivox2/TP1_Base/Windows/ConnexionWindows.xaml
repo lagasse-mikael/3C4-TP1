@@ -6,80 +6,45 @@
         xmlns:local="clr-namespace:TP1_Base_Prof"
         mc:Ignorable="d"
         Title="MainWindow" Height="225" Width="350">
-    <Window.Resources>
 
-    </Window.Resources>
+
     <StackPanel Background="#23272a" >
-        <StackPanel.Resources>
-
-            <Style x:Key="TextWhite" TargetType="{x:Type TextBlock}">
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-
-            <Style x:Key="roundTextBox" TargetType="{x:Type TextBox}">
-                <Setter Property="Background" Value="#FF181819"/>
-                <Setter Property="Width" Value="125"/>
-
-                <Style.Resources >
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                        <Setter Property="BorderBrush" Value="White"/>
 
 
-                    </Style>
-                </Style.Resources>
-            </Style>
-            
-            <!--J'ai bouger les styles des buttons-->
-        </StackPanel.Resources>
-
-        
-
-<<<<<<< HEAD
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button x:Name="choixLoginEtudiant" Content="Étudiant" Style="{StaticResource ButtonStyle}" Margin="10" Click="choixLogin_Click"/>
-            <Button x:Name="choixLoginProf" Content="Enseignant" Style="{StaticResource DarkButton}" Margin="10" Click="choixLogin_Click"/>
-=======
-        <WrapPanel HorizontalAlignment="Center">
-            <Button Content="Étudiant" Style="{StaticResource ButtonStyle}" Margin="10" />
-            <Button Content="Enseignant" Style="{StaticResource DarkButton}" Margin="10"/>
->>>>>>> 863ab02bb551624fc558ef5bb41cd86751b406aa
+            <Button x:Name="choixLoginEtudiant" Content="Étudiant" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Click="choixLogin_Click"/>
+            <Button x:Name="choixLoginProf" Content="Enseignant" Style="{StaticResource DarkButtonConnexion}" Margin="10" Click="choixLogin_Click"/>
         </WrapPanel>
 
-        <WrapPanel  HorizontalAlignment="Center" Margin=" 30 0 0 0">
-            <TextBlock Style="{StaticResource TextWhite}">User :</TextBlock>
-            <TextBox x:Name="UserIdTextBox" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBox}" TextChanged="UserIdTextBox_TextChanged"></TextBox>
+
+        <WrapPanel  HorizontalAlignment="Center" Margin=" 30 15 0 0">
+            <TextBlock Style="{StaticResource TextWhiteConnexion}">User :</TextBlock>
+            <TextBox x:Name="UserIdTextBox" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxConnexion}" TextChanged="UserIdTextBox_TextChanged"></TextBox>
 
         </WrapPanel>
 
         <WrapPanel HorizontalAlignment="Center" Margin="0 10 0 0">
-            <TextBlock Style="{StaticResource TextWhite}">Password :</TextBlock>
-            <TextBox x:Name="StudentFirstNameTextBlock" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBox}"></TextBox>
+            <TextBlock Style="{StaticResource TextWhiteConnexion}">Password :</TextBlock>
+            <TextBox x:Name="StudentFirstNameTextBlock" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxConnexion}"></TextBox>
         </WrapPanel>
 
-<<<<<<< HEAD
-        <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Se connecter" Style="{StaticResource ButtonStyle}" Margin="10" Click="Login"/>
-=======
-        <WrapPanel HorizontalAlignment="Center">
-            <Button Content="Se connecter" Style="{StaticResource ButtonStyle}" Margin="10"/>
->>>>>>> 863ab02bb551624fc558ef5bb41cd86751b406aa
-            <Button Content="Mot de passe oublié" Style="{StaticResource DarkButton}" Margin="10"/>
+
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 15 0 0 ">
+            <Button Content="Se connecter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Click="Login"/>
+
+            <Button Content="Mot de passe oublié" Style="{StaticResource DarkButtonConnexion}" Margin="10"/>
         </WrapPanel>
+
+
 
         <!--<WrapPanel Grid.Row="0" HorizontalAlignment="Center">
             -->
         <!--Test à faire pour le radio button du prof-->
-        <!-- 
-
-            
-            
+        <!--      
         </WrapPanel>-->
-
-
-
-
         <!--<Button x:Name="OkButton" Content="Ok" Margin="105,30,105,0" />-->
+
     </StackPanel>
+
+
 </Window>

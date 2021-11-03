@@ -11,52 +11,6 @@
 
     </Window.Resources>
     <StackPanel Background="#23272a" >
-        <StackPanel.Resources>
-
-            <Style x:Key="TextWhite" TargetType="{x:Type TextBlock}">
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-
-            <Style x:Key="roundTextBox" TargetType="{x:Type TextBox}">
-                <Setter Property="Background" Value="#FF181819"></Setter>
-                <Setter Property="Width" Value="125"></Setter>
-
-                <Style.Resources >
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                        <Setter Property="BorderBrush" Value="White"/>
-
-
-                    </Style>
-                </Style.Resources>
-            </Style>
-
-            <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-                <Setter Property="Background" Value="White"/>
-                <Setter Property="Foreground" Value="#23272a"/>
-                <Setter Property="Padding" Value="10 10 10 10"/>
-                <Setter Property="Width" Value="200"/>
-                <Setter Property="Template" Value="{DynamicResource BoutonEtudiantConnexion}"/>
-                <Style.Resources >
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                        <Setter Property="BorderBrush" Value="White"/>
-
-
-                    </Style>
-                </Style.Resources>
-
-            </Style>
-
-            <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
-
-
-
-                <Setter Property="Background" Value="#23272a"/>
-                <Setter Property="Foreground" Value="White"/>
-            </Style>
-        </StackPanel.Resources>
 
         <Grid>
             <Grid.RowDefinitions>
@@ -68,15 +22,15 @@
         </Grid>
 
         <WrapPanel  Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les étudiants" Style="{StaticResource ButtonStyle}" Margin="10" />
+            <Button Content="Modifier les étudiants" Style="{StaticResource ButtonStyleModif}" Margin="10" />
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les enseignants" Style="{StaticResource ButtonStyle}" Margin="10" />
+            <Button Content="Modifier les enseignants" Style="{StaticResource ButtonStyleModif}" Margin="10" />
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les horaires" Style="{StaticResource ButtonStyle}" Margin="10" />
+            <Button Content="Modifier les horaires" Style="{StaticResource ButtonStyleModif}" Margin="10" />
 
         </WrapPanel>
 
@@ -85,7 +39,7 @@
         <!--<Line X1="1" Y1="1" X2="1" Y2="0" Stroke="white" StrokeThickness="3" Stretch="Fill" Width=" 250"></Line>-->
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Quitter" Style="{StaticResource DarkButton}" Margin="10" />
+            <Button Content="Quitter" Style="{StaticResource DarkButtonModif}" Margin="10" />
 
         </WrapPanel>
     </StackPanel>

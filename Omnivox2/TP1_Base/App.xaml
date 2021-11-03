@@ -60,8 +60,34 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
-        <!--Notre section a nous autres-->
-        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+
+        <!--=========================================================================================================================================================================================-->
+        <!--Style connexion window-->
+
+
+
+
+
+        <Style x:Key="TextWhiteConnexion" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="roundTextBoxConnexion" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF181819"/>
+            <Setter Property="Width" Value="125"/>
+
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ButtonStyleConnexion" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="#23272a"/>
             <Setter Property="Padding" Value="10 10 10 10"/>
@@ -79,12 +105,164 @@
 
         </Style>
 
-        <Style x:Key="DarkButton" BasedOn="{StaticResource ButtonStyle}" TargetType="{x:Type Button}">
+        <Style x:Key="DarkButtonConnexion" BasedOn="{StaticResource ButtonStyleConnexion}" TargetType="{x:Type Button}">
 
-            <Setter Property="Template" Value="{DynamicResource DarkButtonStyle}"/>
+            <Setter Property="Template" Value="{DynamicResource DarkButtonStyleConnexion}"/>
 
             <Setter Property="Background" Value="#23272a"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
+
+        <!--=========================================================================================================================================================================================-->
+        <!--Style modifier-->
+
+
+        <Style x:Key="ButtonStyleModif" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#23272a"/>
+            <Setter Property="Padding" Value="10 10 10 10"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Template" Value="{DynamicResource BoutonEtudiantConnexion}"/>
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+                </Style>
+            </Style.Resources>
+
+        </Style>
+
+        <Style x:Key="DarkButtonModif" BasedOn="{StaticResource ButtonStyleModif}" TargetType="{x:Type Button}">
+
+
+
+            <Setter Property="Background" Value="#23272a"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+
+        <!--=========================================================================================================================================================================================-->
+        <!--Style horaire-->
+
+        <Style x:Key="LabelTextWhiteHoraire" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+
+
+
+        </Style>
+
+        <Style x:Key="TextWhiteHoraire" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="31 10 10 10"/>
+            <Setter Property="FontSize" Value="30"/>
+
+
+
+        </Style>
+
+        <Style x:Key="TextWhiteWeekDayHoraire" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="31 10 31 10"/>
+            <Setter Property="FontSize" Value="25"/>
+
+
+
+        </Style>
+
+        <Style x:Key="roundTextBoxHoraire" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF181819"></Setter>
+            <Setter Property="Width" Value="125"></Setter>
+
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ButtonStyleHoraire" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#23272a"/>
+            <Setter Property="Padding" Value="10 10 10 10"/>
+            <Setter Property="Margin" Value="21"/>
+            <Setter Property="Template" Value="{DynamicResource WhiteButtonStyleHoraire}"/>
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+
+
+                </Style>
+            </Style.Resources>
+
+        </Style>
+
+        <Style x:Key="DarkButtonHoraire" BasedOn="{StaticResource ButtonStyleHoraire}" TargetType="{x:Type Button}">
+
+            <Setter Property="Template" Value="{DynamicResource DarkButtonStyleHoraire}"/>
+
+            <Setter Property="Background" Value="#23272a"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+
+        <Style x:Key="ComboBoxParamHoraire" TargetType="{x:Type ComboBox}">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="61"/>
+
+
+
+
+
+        </Style>
+
+
+        <!--=========================================================================================================================================================================================-->
+        <!--Mod/Student/Teacher-->
+
+
+        <Style x:Key="TextWhiteMod" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="28"/>
+        </Style>
+
+        <Style x:Key="roundTextBoxMod" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF181819"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ListViewMod" TargetType="{x:Type ListView}">
+            <Setter Property="Height" Value="275"/>
+            <Setter Property="Width" Value="735"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Margin" Value=" 30 21 0 0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+
     </Application.Resources>
 </Application>

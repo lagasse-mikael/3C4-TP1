@@ -40,15 +40,15 @@ namespace TP1_Base_Prof
         {
             Button btnCast = (Button)sender;
 
-            if(btnCast.Name == "choixLoginEtudiant")
+            if (btnCast.Name == "choixLoginEtudiant")
             {
-                btnCast.Style = (Style)App.Current.Resources["ButtonStyle"];
-                choixLoginProf.Style = (Style)App.Current.Resources["DarkButton"];
+                btnCast.Style = (Style)App.Current.Resources["ButtonStyleConnexion"];
+                choixLoginProf.Style = (Style)App.Current.Resources["DarkButtonConnexion"];
             }
             else
             {
-                btnCast.Style = (Style)App.Current.Resources["ButtonStyle"];
-                choixLoginEtudiant.Style = (Style)App.Current.Resources["DarkButton"];
+                btnCast.Style = (Style)App.Current.Resources["ButtonStyleConnexion"];
+                choixLoginEtudiant.Style = (Style)App.Current.Resources["DarkButtonConnexion"];
             }
 
 
