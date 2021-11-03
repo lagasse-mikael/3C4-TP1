@@ -60,15 +60,35 @@
     <Compile Include="Classes\Student.cs" />
     <Compile Include="Classes\Teacher.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Windows\AddStudent.xaml.cs">
+      <DependentUpon>AddStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddTeacher.xaml.cs">
+      <DependentUpon>AddTeacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Modifier2.xaml.cs">
+      <DependentUpon>Modifier2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ModStudent.xaml.cs">
       <DependentUpon>ModStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ModTeacher.xaml.cs">
       <DependentUpon>ModTeacher.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Note.xaml.cs">
+      <DependentUpon>Note.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\AddStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\BetterOmnivox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\Modifier2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ModStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NewEvaluation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Note.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

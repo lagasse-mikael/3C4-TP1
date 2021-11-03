@@ -1,0 +1,39 @@
+﻿<Window x:Class="TP1_Base_Prof.Windows.Note"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP1_Base_Prof.Windows"
+        mc:Ignorable="d"
+        Title="Note" Height="750" Width="1000" Background="#23272a">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteHoraire}" VerticalAlignment="Center">Evaluation :</TextBlock>
+            <ComboBox Style="{StaticResource ComboBoxParamHoraire}" Width="250" Height="75">
+                
+            </ComboBox>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button VerticalAlignment="Center" Content="Ajouter évaluation" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28"/>
+        </WrapPanel>
+
+
+
+
+
+    </Grid>
+</Window>
