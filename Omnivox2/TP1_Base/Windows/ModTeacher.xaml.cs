@@ -23,5 +23,15 @@ namespace TP1_Base_Prof.Windows
         {
             InitializeComponent();
         }
+
+        private void UserIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

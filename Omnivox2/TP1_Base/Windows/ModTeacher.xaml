@@ -24,7 +24,7 @@
             </ListView>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 15 0 0 ">
-            <Button Content="Se connecter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Click="Login"/>
+            <Button Content="Se connecter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Click="LoginButton_Click"/>
 
             <Button Content="Mot de passe oublié" Style="{StaticResource DarkButtonConnexion}" Margin="10"/>
         </WrapPanel>

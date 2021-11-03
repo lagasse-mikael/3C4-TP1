@@ -15,7 +15,13 @@ using System.Windows.Shapes;
 namespace TP1_Base_Prof
 {
     /// <summary>
-    /// Logique d'interaction pour BetterOmnivox.xaml
+    /// Logique d'interaction pour Modifier.xaml
     /// </summary>
-
+    public partial class Modifier : Window
+    {
+        public Modifier()
+        {
+            InitializeComponent();
+        }
+    }
 }

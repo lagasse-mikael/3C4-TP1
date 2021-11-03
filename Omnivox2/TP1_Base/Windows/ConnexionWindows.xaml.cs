@@ -33,7 +33,57 @@ namespace TP1_Base_Prof
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            // Icitte
+            string user = UserIdTextBox.Text;
+            int userID;
+            string password = UserPasswordTextBox.Text;
+
+            Teacher possibleTeacher;
+            Student possibleStudent;
+
+            if(user == "admin" && password == "admin")
+            {
+                MessageBox.Show("ADMIN ADMIN");
+
+                var windowAdmin = new Modifier();
+                windowAdmin.Show();
+
+                return;
+            }
+
+            try
+            {
+                userID = Convert.ToInt32(user);
+            }
+            catch(FormatException fe)
+            {
+                MessageBox.Show("met un id qui fait du sens");
+                return;
+            }
+
+            if (isEtudiant)
+            {
+                if(App.Current.Students.TryGetValue(Convert.ToInt32(user),out possibleStudent) && possibleStudent.Password == password)
+                {
+                    MessageBox.Show("Bienvenue l'etudiant!");
+                    // Omnivox en tant qu'etudiant
+                }
+                else
+                {
+                    MessageBox.Show("Mauvais mot de passe pour l'etudiant");
+                }
+            }
+            else
+            {
+                if (App.Current.Teachers.TryGetValue(Convert.ToInt32(user), out possibleTeacher) && possibleTeacher.Password == password)
+                {
+                    MessageBox.Show("Bienvenue le prof!");
+                    // Omnivox en tant que prof
+                }
+                else
+                {
+                    MessageBox.Show("Mauvais mot de passe pour le prof");
+                }
+            }
         }
 
         private void choixLogin_Click(object sender, RoutedEventArgs e)
@@ -44,11 +94,13 @@ namespace TP1_Base_Prof
             {
                 btnCast.Style = (Style)App.Current.Resources["ButtonStyleConnexion"];
                 choixLoginProf.Style = (Style)App.Current.Resources["DarkButtonConnexion"];
+                isEtudiant = true;
             }
             else
             {
                 btnCast.Style = (Style)App.Current.Resources["ButtonStyleConnexion"];
                 choixLoginEtudiant.Style = (Style)App.Current.Resources["DarkButtonConnexion"];
+                isEtudiant = false;
             }
 
 
