@@ -5,7 +5,7 @@
              StartupUri="./Windows/Modifier2.xaml">
     <Application.Resources>
         <ControlTemplate x:Key="WhiteButtonStyle" TargetType="{x:Type ButtonBase}">
-            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+            <Border x:Name="border" BorderBrush="White" BorderThickness="3" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
                 <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Border>
             <ControlTemplate.Triggers>
@@ -356,6 +356,65 @@
 
                 </Style>
             </Style.Resources>
+
+        </Style>
+
+
+        <Style x:Key="ListViewNote" TargetType="{x:Type ListView}">
+         
+            <Setter Property="Background" Value="#FF181819"/>
+            <Setter Property="Margin" Value="10 10 10 0"/>
+            
+        </Style>
+
+        <Style x:Key="ListViewNote2" TargetType="{x:Type ListView}">
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Width" Value="551"/>
+            <Setter Property="Background" Value="#FF181819"/>
+            <Setter Property="Margin" Value="10 10 10 0"/>
+            <Setter Property="Background" Value="#23272a"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+
+        </Style>
+
+
+        <!--=========================================================================================================================================================================================-->
+        <!--Omnivox Windows-->
+
+
+        <Style x:Key="ButtonStyleOmnivox" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#23272a"/>
+            <Setter Property="Padding" Value="10 10 10 10"/>
+            <Setter Property="Template" Value="{DynamicResource WhiteButtonStyle}"/>
+            <Style.Resources >
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+
+
+
+
+                </Style>
+            </Style.Resources>
+
+        </Style>
+
+        <Style x:Key="ButtonStyleOmnivoxBlue" BasedOn="{StaticResource ButtonStyleOmnivox}" TargetType="{x:Type Button}">
+
+            
+
+            <Setter Property="Background" Value="#23272a"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="LabelTextOrange" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="DarkOrange"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="25"/>
+
+
 
         </Style>
 

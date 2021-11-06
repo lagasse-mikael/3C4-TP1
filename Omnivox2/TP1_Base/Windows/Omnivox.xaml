@@ -1,0 +1,162 @@
+﻿<Window x:Class="TP1_Base_Prof.Windows.Omnivox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP1_Base_Prof.Windows"
+        mc:Ignorable="d"
+        Title="Omnivox" Height="600" Width="800">
+
+
+    <ScrollViewer>
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                
+            </Grid.RowDefinitions>
+        
+
+
+        
+        <WrapPanel  Background="#FF5C98F0">
+        <StackPanel>
+        <Label FontSize="13">Bienvenue, </Label>
+            <Label FontSize="20" FontWeight="Bold" > X:Name</Label>    
+        </StackPanel>
+        </WrapPanel>
+        
+        <WrapPanel Grid.Row="0" Grid.Column="1" Background="#FF5C98F0"></WrapPanel>
+
+            <WrapPanel Grid.Row="0" Grid.Column="2" Background="#FF5C98F0" >
+                <Button Content="Ajouter" Style="{StaticResource ButtonStyleOmnivox}" Margin="10" Width="100"  />
+               
+                <Button Content="Annuler" Style="{StaticResource ButtonStyleOmnivoxBlue}" Margin="10" Width="100"/>
+                
+            </WrapPanel>
+
+
+            <StackPanel Grid.Row="2" Grid.Column="0">
+                
+
+                <Label Style="{StaticResource LabelTextOrange}" Foreground="#FFD87700" Margin="15 0 0 0">Mes Cours</Label>
+
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225"></Line>
+
+                <ComboBox Width="225" Margin="0 10 0 5"></ComboBox>
+
+                <ListView Height="60" Width="225">
+                    
+                </ListView>
+
+                <Label Style="{StaticResource LabelTextOrange}" Foreground="#FFD87700" Margin="15 0 0 0">Services Omnivox</Label>
+                
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225" Margin="0 0 0 0"></Line>
+
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj-estd.omnivox.ca/estd/hrre/horaire.ovx">
+                Horaire de cours
+                </Hyperlink>     
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Changer votre mot de passe
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Réinitialiser le mot de passe 
+                </Hyperlink>
+                </TextBlock>
+
+                <Label Style="{StaticResource LabelTextOrange}" Foreground="#FFD87700" Margin="15 0 0 0">Autres services</Label>
+
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225" Margin="0 0 0 0"></Line>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://vega.collecto.ca/fr/">
+                Banque de fiches signalétiques 
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://login.microsoftonline.com/">
+                Connexion portail Office 365
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.moodle.decclic.qc.ca/">
+                Moodle
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cegepdesaintjerome.octopus-itsm.com/Web/RequestList.aspx">
+                Octopus - Demande de service 
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Remise des travaux 
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Repro + 
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Service du développement pédagogique 
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                SIP
+                </Hyperlink>
+                </TextBlock>
+
+                <TextBlock Margin="15 0 0 0">
+                <Hyperlink NavigateUri="https://cstj.omnivox.ca/intr/Module/Profil/ModifMotPasse.aspx">
+                Travail - Santé - Vie
+                </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                <Label Style="{StaticResource LabelTextOrange}" Foreground="#FFD87700" Margin="15 0 0 0">Autres services</Label>
+
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="500" Margin="0 0 0 0"></Line>
+            </StackPanel>
+        
+            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
+
+                
+
+                
+                <Image Height="250" Width="250" Source="/Assets/Images/news01.jpg" />
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225" Margin="0 0 0 0"></Line>
+                
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+    </ScrollViewer>
+</Window>

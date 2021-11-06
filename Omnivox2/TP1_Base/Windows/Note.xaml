@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP1_Base_Prof.Windows"
         mc:Ignorable="d"
-        Title="Note" Height="750" Width="1000" Background="#23272a">
+        Title="Note" Height="850" Width="1000" Background="#23272a">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -16,6 +16,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -31,9 +33,48 @@
             <Button VerticalAlignment="Center" Content="Ajouter évaluation" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28"/>
         </WrapPanel>
 
+        <WrapPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Pondération : </TextBlock>
+            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+        </WrapPanel>
 
+        <WrapPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Moyenne :</TextBlock>
+            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+        </WrapPanel>
+        
+        <ListView Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ListViewNote}">
+            <ScrollBar Height="200" Margin="940 0 0 0" />
 
+        </ListView>
+       
 
+        <WrapPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Identifiant :</TextBlock>
+            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button VerticalAlignment="Center" Content="Ajouter résultat" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28"/>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Nom :</TextBlock>
+            <TextBox FontWeight="Bold" Margin=" 85 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Prénom :</TextBlock>
+            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="6" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 10 0 0" FontSize="20">Résultat de l'étudiant :</TextBlock>
+            <ListView Style="{StaticResource ListViewNote2}" >
+                
+            </ListView>
+            
+        </StackPanel>
 
     </Grid>
 </Window>

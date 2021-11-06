@@ -8,15 +8,6 @@
         Title="Modifier2" Height="300" Width="300">
     <StackPanel Background="#23272a" >
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-        </Grid>
-
         <WrapPanel  Grid.Row="0" HorizontalAlignment="Center">
             <Button Content="Modifier les étudiants" Style="{StaticResource ButtonStyleModif}" Margin="10" />
         </WrapPanel>

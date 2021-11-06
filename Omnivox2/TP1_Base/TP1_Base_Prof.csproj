@@ -78,6 +78,9 @@
     <Compile Include="Windows\Note.xaml.cs">
       <DependentUpon>Note.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Omnivox.xaml.cs">
+      <DependentUpon>Omnivox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Note.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Omnivox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
