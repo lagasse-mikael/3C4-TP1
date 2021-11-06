@@ -35,7 +35,7 @@ namespace TP1_Base_Prof
         {
             string user = UserIdTextBox.Text;
             int userID;
-            string password = UserPasswordTextBox.Text;
+            string password = UserPasswordBox.Password;
 
             Teacher possibleTeacher;
             Student possibleStudent;
@@ -67,7 +67,7 @@ namespace TP1_Base_Prof
                     MessageBox.Show("Bienvenue l'etudiant!");
                     // Omnivox en tant qu'etudiant
                 }
-                else
+                else 
                 {
                     MessageBox.Show("Mauvais mot de passe pour l'etudiant");
                 }
