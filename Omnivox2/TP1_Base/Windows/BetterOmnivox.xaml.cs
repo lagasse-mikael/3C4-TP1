@@ -20,9 +20,11 @@ namespace TP1_Base_Prof
     public partial class BetterOmnivox : Window
     {
         private Course coursObj;
+        private Evaluation evalChoisie;
         public BetterOmnivox(Teacher prof)
         {
             InitializeComponent();
+            showNotes.IsEnabled = false;
 
             userLoggedIn.Text = $"{prof.FirstName} {prof.LastName}";
 
@@ -80,6 +82,19 @@ namespace TP1_Base_Prof
         public void NewEvaluationClosed(object sender, System.EventArgs e)
         {
             refreshLists();
+        }
+
+        private void listeEvaluation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            showNotes.IsEnabled = true;
+            evalChoisie = coursObj.Evaluations[listeEvaluation.SelectedIndex];
+        }
+
+        private void showNotes_Click(object sender, RoutedEventArgs e)
+        {
+            var showNotesWindow = new NotesWindow(evalChoisie);
+
+            showNotesWindow.Show();
         }
     }
 }

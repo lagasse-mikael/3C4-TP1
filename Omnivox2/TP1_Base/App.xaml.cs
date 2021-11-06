@@ -17,13 +17,6 @@ namespace TP1_Base_Prof
 
         public T GetWindow<T>() { return Windows.OfType<T>().First(); }
 
-        /*  On vas faire les profs avant   */
-
-        /*
-         * Apparament qu'on peux faire des modifications a une liste avec un get.
-         * C'qui est ... surprenant?
-         */
-
         public Dictionary<int, Student> Students { get => _students; }
         private Dictionary<int, Student> _students = new Dictionary<int, Student>()
         {

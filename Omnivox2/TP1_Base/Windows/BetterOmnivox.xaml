@@ -14,7 +14,7 @@
 
         <StackPanel>
             <TextBlock FontSize="19" HorizontalAlignment="Left" >Cours du prof en question :</TextBlock>
-            <ListBox SelectionChanged="listeCours_SelectionChanged"  x:Name="listeCours" Width="500" HorizontalAlignment="Left">
+            <ListBox x:Name="listeCours" SelectionChanged="listeCours_SelectionChanged" Width="500" HorizontalAlignment="Left">
             </ListBox>
 
             <TextBlock FontSize="19" HorizontalAlignment="Left" >Eleves frequentant le cours en question :</TextBlock>
@@ -22,12 +22,12 @@
             </ListView>
 
             <TextBlock FontSize="19" HorizontalAlignment="Left" >Evaluations liees au cours :</TextBlock>
-            <ListView  x:Name="listeEvaluation" Width="500" HorizontalAlignment="Left">
+            <ListView  x:Name="listeEvaluation" SelectionChanged="listeEvaluation_SelectionChanged" Width="500" HorizontalAlignment="Left">
             </ListView>
 
             <WrapPanel>
                 <Button x:Name="addEvaluation" Width="150" HorizontalAlignment="Left" Margin="0 15 0 0" Click="addEvaluation_Click">Ajouter une evaluation</Button>
-                <!--<Button x:Name="showNotes" Width="150" HorizontalAlignment="Left" Margin="15 15 0 0">Voir note de l'evele </Button>-->
+                <Button x:Name="showNotes" Width="150" HorizontalAlignment="Left" Margin="15 15 0 0" Click="showNotes_Click" >Voir les notes</Button>
             </WrapPanel>
 
         </StackPanel>
