@@ -60,6 +60,12 @@
     <Compile Include="Classes\Student.cs" />
     <Compile Include="Classes\Teacher.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Windows\AddEval.xaml.cs">
+      <DependentUpon>AddEval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddResult.xaml.cs">
+      <DependentUpon>AddResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddStudent.xaml.cs">
       <DependentUpon>AddStudent.xaml</DependentUpon>
     </Compile>
@@ -87,6 +93,14 @@
     <Compile Include="Windows\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\AddEval.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AddStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
