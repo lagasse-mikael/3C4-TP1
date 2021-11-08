@@ -12,16 +12,48 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TP1_Base_Prof.Windows
+namespace TP1_Base_Prof
 {
     /// <summary>
     /// Logique d'interaction pour AddEval.xaml
     /// </summary>
     public partial class AddEval : Window
     {
-        public AddEval()
+        private Course coursModif;
+        public AddEval(Course cours)
         {
             InitializeComponent();
+
+            coursModif = cours;
+        }
+
+        private void addEval_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (nomEval.Text == "" || valEval.Text == "") { throw new Exception("intro a la profession"); }
+
+                MessageBoxResult reponse = MessageBox.Show($"Etes vous sure de vouloir ajouter l'evaluation '{nomEval.Text}' avec {valEval.Text} comme ponderation?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (reponse == MessageBoxResult.Yes)
+                {
+                    coursModif.Evaluations.Add(new Evaluation { Name = nomEval.Text, Value = Convert.ToInt32(valEval.Text) });
+                    MessageBox.Show("L'evaluation a ete ajouter!", "Evaluation ajouter", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+
+
+
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Quelque chose n'est pas cohérent..", "NON", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

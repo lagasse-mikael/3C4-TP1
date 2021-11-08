@@ -82,5 +82,11 @@ namespace TP1_Base_Prof
             }
             InitAllStudent();
         }
+
+        private void newEleveInit_Window(object sender, RoutedEventArgs e)
+        {
+            var windowInitEleve = new AddStudent();
+            windowInitEleve.Show();
+        }
     }
 }

@@ -40,27 +40,31 @@ namespace TP1_Base_Prof
 
         private void listeEval_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<int> notes = new List<int>();
+            refreshListNotes();
+        }
 
+        private void refreshListNotes()
+        {
             listeElevesNotes.Items.Clear();
             ponderationText.Text = "";
             moyenneText.Text = "";
 
-            if (listeEval.SelectedIndex > -1 && coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults != null)
+            if (listeEval.SelectedIndex > -1)
             {
-                foreach (var note in coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults)
-                {
-                    Student eleve;
-                    App.Current.Students.TryGetValue(note.Key, out eleve);
-
-                    string stringFormat = $" {eleve.Id} - {eleve.FirstName} {eleve.LastName} - {note.Value}";
-                    notes.Add(note.Value);
-
-                    listeElevesNotes.Items.Add(stringFormat);
-                }
                 ponderationText.Text = coursChoisie.Evaluations[listeEval.SelectedIndex].Value.ToString();
-                moyenneText.Text = (coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults.Values.ToArray().Sum() / coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults.Values.Count).ToString();
+                if (coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults.Count > 0)
+                {
+                    moyenneText.Text = (coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults.Values.ToArray().Sum() / coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults.Values.Count).ToString();
+                    foreach (var note in coursChoisie.Evaluations[listeEval.SelectedIndex].StudentResults)
+                    {
+                        Student eleve;
+                        App.Current.Students.TryGetValue(note.Key, out eleve);
 
+                        string stringFormat = $" {eleve.Id} - {eleve.FirstName} {eleve.LastName} - {note.Value}";
+
+                        listeElevesNotes.Items.Add(stringFormat);
+                    }
+                }
             }
         }
 
@@ -107,12 +111,17 @@ namespace TP1_Base_Prof
 
             foreach (var evaluation in coursChoisie.Evaluations)
             {
-                if (evaluation.StudentResults.ContainsKey(eleve.Id))
+                if (evaluation.StudentResults.Count > 0 && evaluation.StudentResults.ContainsKey(eleve.Id))
                 {
                     int noteEleve;
                     evaluation.StudentResults.TryGetValue(eleve.Id, out noteEleve);
 
                     string formatString = $"{evaluation.Name}\t{noteEleve}/{evaluation.Value}\tMoyenne:{evaluation.StudentResults.Values.Sum() / evaluation.StudentResults.Values.Count()}";
+                    resumerNotes.Items.Add(formatString);
+                }
+                else if(evaluation.StudentResults.Count == 0)
+                {
+                    string formatString = $"{evaluation.Name}\t0/{evaluation.Value}\tMoyenne: 0";
                     resumerNotes.Items.Add(formatString);
                 }
             }
@@ -144,7 +153,7 @@ namespace TP1_Base_Prof
 
         private void ajoutEval_Click(object sender, RoutedEventArgs e)
         {
-            var ajoutEvalWindow = new NewEvaluation(coursChoisie);
+            var ajoutEvalWindow = new AddEval(coursChoisie);
             ajoutEvalWindow.Closed += ajoutEvalClosed;
 
             ajoutEvalWindow.Show();
@@ -159,7 +168,23 @@ namespace TP1_Base_Prof
 
         private void ajoutResultat(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TO DO ", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            if (listeEval.SelectedIndex < 0)
+            {
+                return;
+            }
+
+            var ajoutResultat = new AddResult(coursChoisie.Evaluations[listeEval.SelectedIndex]);
+            ajoutResultat.Closed += ajoutResultatClosed;
+
+            ajoutResultat.Show();
+
+            return;
+        }
+
+        private void ajoutResultatClosed(object sender, System.EventArgs e)
+        {
+            idEleve.Text = "";
+            refreshListNotes();
         }
     }
 }

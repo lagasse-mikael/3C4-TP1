@@ -1,4 +1,4 @@
-﻿<Window x:Class="TP1_Base_Prof.Windows.AddStudent"
+﻿<Window x:Class="TP1_Base_Prof.AddStudent"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,27 +18,27 @@
 
         <WrapPanel  HorizontalAlignment="Center" Margin=" 30 15 0 0">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="0 20 0 0 ">Identifiant :</TextBlock>
-            <TextBox FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="idEleve" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
 
         </WrapPanel>
 
         <WrapPanel  HorizontalAlignment="Center" Margin=" 30 15 0 0">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin=" 25 20 0 0">Prénom :</TextBlock>
-            <TextBox FontWeight="Bold" Margin="10 0 0 0"  Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="prenomEleve" FontWeight="Bold" Margin="10 0 0 0"  Style="{StaticResource roundTextBoxAdd}" ></TextBox>
 
         </WrapPanel>
 
         <WrapPanel  HorizontalAlignment="Center" Margin=" 30 15 0 0">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="50 20 0 0 ">Nom :</TextBlock>
-            <TextBox FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="nomEleve" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
 
         </WrapPanel>
 
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 50 0 0 ">
-            <Button Content="Ajouter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Width="100" />
+            <Button Content="Ajouter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Width="100" Click="newEtudiant_Window" />
 
-            <Button Content="Annuler" Style="{StaticResource DarkButtonConnexion}" Margin="10" Width="100"/>
+            <Button Content="Annuler" Style="{StaticResource DarkButtonConnexion}" Margin="10" Width="100" Click="Button_Click"/>
 
         </WrapPanel>
 

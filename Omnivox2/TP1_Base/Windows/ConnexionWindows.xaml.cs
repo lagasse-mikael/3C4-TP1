@@ -62,8 +62,6 @@ namespace TP1_Base_Prof
             {
                 if(App.Current.Students.TryGetValue(Convert.ToInt32(user),out possibleStudent) && possibleStudent.Password == password)
                 {
-                    MessageBox.Show("Bienvenue l'etudiant!");
-
                     var windowOmnivox = new Omnivox(possibleStudent);
                     windowOmnivox.Show();
 
@@ -78,8 +76,6 @@ namespace TP1_Base_Prof
             {
                 if (App.Current.Teachers.TryGetValue(Convert.ToInt32(user), out possibleTeacher) && possibleTeacher.Password == password)
                 {
-                    MessageBox.Show("Bienvenue le prof!");
-
                     var windowOmnivox = new Omnivox(possibleTeacher);
                     windowOmnivox.Show();
                 }

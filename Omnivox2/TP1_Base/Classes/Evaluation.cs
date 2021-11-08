@@ -6,6 +6,6 @@ namespace TP1_Base_Prof
     {
         public string Name;
         public int Value;
-        public Dictionary<int, int> StudentResults;
+        public Dictionary<int, int> StudentResults = new Dictionary<int, int>();
     }
 }

@@ -78,5 +78,10 @@ namespace TP1_Base_Prof
             InitAllTeachers();
         }
 
+        private void newProf_Window_Click(object sender, RoutedEventArgs e)
+        {
+            var windowInitProf = new AddTeacher();
+            windowInitProf.Show();
+        }
     }
 }
