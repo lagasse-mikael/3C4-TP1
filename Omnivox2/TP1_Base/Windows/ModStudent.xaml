@@ -1,4 +1,4 @@
-﻿<Window x:Class="TP1_Base_Prof.Windows.ModStudent"
+﻿<Window x:Class="TP1_Base_Prof.ModStudent"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,19 +15,19 @@
 
         <WrapPanel  HorizontalAlignment="Left" Margin=" 30 15 0 0">
             <TextBlock Style="{StaticResource TextWhiteMod}">Rechercher :</TextBlock>
-            <TextBox FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxMod}" ></TextBox>
+            <TextBox x:Name="keywordSearch" FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxMod}" KeyUp="newInput"></TextBox>
 
         </WrapPanel>
 
 
-        <ListView Style="{StaticResource ListViewMod}" >
+        <ListView x:Name="listeEtudiants" Style="{StaticResource ListViewMod}" >
 
         </ListView>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 15 0 0 ">
             <Button Content="Ajouter" Style="{StaticResource ButtonStyleConnexion}" Margin="10" Width="100" />
 
-            <Button Content="Supprimer" Style="{StaticResource DarkButtonConnexion}" Margin="10" Width="100"/>
+            <Button x:Name="deleteStudent" Content="Supprimer" Style="{StaticResource DarkButtonConnexion}" Margin="10" Width="100" Click="deleteStudent_Click"/>
 
         </WrapPanel>
 

@@ -21,15 +21,15 @@
         </Grid>
 
         <WrapPanel  Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les étudiants" Style="{StaticResource ButtonStyleModif}" Margin="10" />
+            <Button Content="Modifier les étudiants" Style="{StaticResource ButtonStyleModif}" Margin="10" Click="ModifEtudiants"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les enseignants" Style="{StaticResource ButtonStyleModif}" Margin="10" />
+            <Button Content="Modifier les enseignants" Style="{StaticResource ButtonStyleModif}" Margin="10" Click="ModifProfs"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Modifier les horaires" Style="{StaticResource ButtonStyleModif}" Margin="10" />
+            <Button Content="Modifier les horaires" Style="{StaticResource ButtonStyleModif}" Margin="10" Click="ModifHoraires" />
 
         </WrapPanel>
 
@@ -38,7 +38,7 @@
         <!--<Line X1="1" Y1="1" X2="1" Y2="0" Stroke="white" StrokeThickness="3" Stretch="Fill" Width=" 250"></Line>-->
 
         <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
-            <Button Content="Quitter" Style="{StaticResource DarkButtonModif}" Margin="10" />
+            <Button Content="Quitter" Style="{StaticResource DarkButtonModif}" Margin="10" Click="Leave" />
 
         </WrapPanel>
     </StackPanel>

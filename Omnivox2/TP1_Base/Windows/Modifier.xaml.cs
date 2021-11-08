@@ -23,5 +23,28 @@ namespace TP1_Base_Prof
         {
             InitializeComponent();
         }
+
+        private void Leave(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ModifEtudiants(object sender, RoutedEventArgs e)
+        {
+            var windowEtudiant = new ModStudent();
+            windowEtudiant.Show();
+        }
+
+        private void ModifProfs(object sender, RoutedEventArgs e)
+        {
+            var windowProfs = new ModTeacher();
+            windowProfs.Show();
+        }
+
+        private void ModifHoraires(object sender, RoutedEventArgs e)
+        {
+            var windowHoraires = new Horaire();
+            windowHoraires.Show();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="TP1_Base_Prof.Windows.Note"
+﻿<Window x:Class="TP1_Base_Prof.Note"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -24,53 +24,53 @@
 
         <WrapPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteHoraire}" VerticalAlignment="Center">Evaluation :</TextBlock>
-            <ComboBox Style="{StaticResource ComboBoxParamHoraire}" Width="250" Height="75">
+            <ComboBox x:Name="listeEval" Style="{StaticResource ComboBoxParamHoraire}" Width="250" Height="75" SelectionChanged="listeEval_SelectionChanged">
                 
             </ComboBox>
         </WrapPanel>
 
         <WrapPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button VerticalAlignment="Center" Content="Ajouter évaluation" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28"/>
+            <Button x:Name="ajoutEval" VerticalAlignment="Center" Content="Ajouter évaluation" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28" Click="ajoutEval_Click"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Pondération : </TextBlock>
-            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="ponderationText" FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" KeyUp="ponderationText_KeyUp" />
         </WrapPanel>
 
         <WrapPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Moyenne :</TextBlock>
-            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="moyenneText" IsReadOnly="True" FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" />
         </WrapPanel>
         
-        <ListView Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ListViewNote}">
-            <ScrollBar Height="200" Margin="940 0 0 0" />
+        <ListView x:Name="listeElevesNotes" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ListViewNote}" SelectionChanged="listeElevesNotes_SelectionChanged">
+            <ScrollBar Height="200" Margin="940 0 0 0"/>
 
         </ListView>
        
 
         <WrapPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Identifiant :</TextBlock>
-            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="idEleve" FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" KeyUp="idEleve_KeyUp"></TextBox>
         </WrapPanel>
 
         <WrapPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button VerticalAlignment="Center" Content="Ajouter résultat" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28"/>
+            <Button VerticalAlignment="Center" Content="Ajouter résultat" Style="{StaticResource ButtonStyleNote}"  Width="325" Height="75" FontSize="28" Click="ajoutResultat"/>
         </WrapPanel>
 
         <WrapPanel Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Nom :</TextBlock>
-            <TextBox FontWeight="Bold" Margin=" 85 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="lastnameEleve" IsReadOnly="True" FontWeight="Bold" Margin=" 85 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
         </WrapPanel>
 
         <WrapPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 0 0 0" FontSize="28">Prénom :</TextBlock>
-            <TextBox FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
+            <TextBox x:Name="firstnameEleve" IsReadOnly="True" FontWeight="Bold" Margin=" 10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
         </WrapPanel>
 
         <StackPanel Grid.Row="6" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="30 10 0 0" FontSize="20">Résultat de l'étudiant :</TextBlock>
-            <ListView Style="{StaticResource ListViewNote2}" >
+            <ListView x:Name="resumerNotes" Style="{StaticResource ListViewNote2}" >
                 
             </ListView>
             

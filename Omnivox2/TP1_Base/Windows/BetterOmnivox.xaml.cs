@@ -92,9 +92,9 @@ namespace TP1_Base_Prof
 
         private void showNotes_Click(object sender, RoutedEventArgs e)
         {
-            var showNotesWindow = new NotesWindow(evalChoisie);
+            // var showNotesWindow = new Note(evalChoisie);
 
-            showNotesWindow.Show();
+            // showNotesWindow.Show();
         }
     }
 }

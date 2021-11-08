@@ -34,17 +34,23 @@ namespace TP1_Base_Prof
         {
             try
             {
-                if(nomEval.Text == "" || valEval.Text == "") { throw new Exception("intro a la profession"); }
+                if (nomEval.Text == "" || valEval.Text == "") { throw new Exception("intro a la profession"); }
 
-                coursModif.Evaluations.Add(new Evaluation { Name = nomEval.Text,Value = Convert.ToInt32(valEval.Text)});
+                MessageBoxResult reponse = MessageBox.Show($"Etes vous sure de vouloir ajouter l'evaluation '{nomEval.Text}' avec {valEval.Text} comme ponderation?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                MessageBox.Show("L'evaluation a ete ajouter!", "Evaluation ajouter", MessageBoxButton.OK, MessageBoxImage.Information);
+                if (reponse == MessageBoxResult.Yes)
+                {
+                    coursModif.Evaluations.Add(new Evaluation { Name = nomEval.Text, Value = Convert.ToInt32(valEval.Text) });
+                    MessageBox.Show("L'evaluation a ete ajouter!", "Evaluation ajouter", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+
+
 
                 this.Close();
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
-                MessageBox.Show("Quelque chose n'est pas cohérent..","NON",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("Quelque chose n'est pas cohérent..", "NON", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

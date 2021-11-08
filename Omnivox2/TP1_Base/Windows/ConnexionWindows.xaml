@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP1_Base_Prof"
         mc:Ignorable="d"
-        Title="MainWindow" Height="225" Width="350">
+        Title="MainWindow" Height="235" Width="350">
 
 
     <StackPanel Background="#23272a" >

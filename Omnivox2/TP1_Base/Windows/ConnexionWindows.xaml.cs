@@ -42,8 +42,6 @@ namespace TP1_Base_Prof
 
             if(user == "admin" && password == "admin")
             {
-                MessageBox.Show("ADMIN ADMIN");
-
                 var windowAdmin = new Modifier();
                 windowAdmin.Show();
 
@@ -65,7 +63,11 @@ namespace TP1_Base_Prof
                 if(App.Current.Students.TryGetValue(Convert.ToInt32(user),out possibleStudent) && possibleStudent.Password == password)
                 {
                     MessageBox.Show("Bienvenue l'etudiant!");
-                    // Omnivox en tant qu'etudiant
+
+                    var windowOmnivox = new Omnivox(possibleStudent);
+                    windowOmnivox.Show();
+
+                    return;
                 }
                 else 
                 {
@@ -77,7 +79,9 @@ namespace TP1_Base_Prof
                 if (App.Current.Teachers.TryGetValue(Convert.ToInt32(user), out possibleTeacher) && possibleTeacher.Password == password)
                 {
                     MessageBox.Show("Bienvenue le prof!");
-                    // Omnivox en tant que prof
+
+                    var windowOmnivox = new Omnivox(possibleTeacher);
+                    windowOmnivox.Show();
                 }
                 else
                 {
