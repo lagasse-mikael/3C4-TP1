@@ -32,7 +32,9 @@
         </StackPanel>
         </WrapPanel>
         
-        <WrapPanel Grid.Row="0" Grid.Column="1" Background="#FF5C98F0"></WrapPanel>
+        <WrapPanel Grid.Row="0" Grid.Column="1" Background="#FF5C98F0">
+            
+        </WrapPanel>
 
             <WrapPanel Grid.Row="0" Grid.Column="2" Background="#FF5C98F0" >
                 <Button Content="Ajouter" Style="{StaticResource ButtonStyleOmnivox}" Margin="10" Width="100"  />
@@ -154,7 +156,22 @@
                 
                 <Image Height="250" Width="250" Source="/Assets/Images/news01.jpg" />
                 <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225" Margin="0 0 0 0"></Line>
+
+                <Image Height="175" Width="250" Source="/Assets/Images/news03.jpg" />
+
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">
+
+
+
+
+                <Image Height="250" Width="250" Source="/Assets/Images/news02.jpg" />
                 
+                <Line X1="0" Y1="0" X2="1" Y2="0" Stroke="LightGray" StrokeThickness="3" Stretch="Fill" Width="225" Margin="0 0 0 0"></Line>
+
+                <Image Height="175" Width="250" Source="/Assets/Images/news04.jpg" />
+
             </StackPanel>
 
 

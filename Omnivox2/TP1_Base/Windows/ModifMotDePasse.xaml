@@ -15,7 +15,7 @@
 
 
 
-        <WrapPanel  HorizontalAlignment="Center" Margin=" 80 15 0 0">
+        <WrapPanel  HorizontalAlignment="Center" Margin=" 80 15 5 0">
             <TextBlock Style="{StaticResource TextWhiteAdd}" Margin="0 20 0 0 ">Ancien mot de passe :</TextBlock>
             <TextBox FontWeight="Bold" Margin="10 0 0 0" Style="{StaticResource roundTextBoxAdd}" ></TextBox>
 
