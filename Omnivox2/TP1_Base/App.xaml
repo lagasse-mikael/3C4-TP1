@@ -94,6 +94,7 @@
             <Setter Property="Background" Value="#FF181819"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Width" Value="125"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
 
             <Style.Resources >
                 <Style TargetType="{x:Type Border}">
@@ -109,6 +110,7 @@
             <Setter Property="Background" Value="#FF181819"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Width" Value="125"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
 
             <Style.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -212,6 +214,7 @@
             <Setter Property="Background" Value="#FF181819"></Setter>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Width" Value="125"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
 
             <Style.Resources >
                 <Style TargetType="{x:Type Border}">
@@ -278,6 +281,7 @@
             <Setter Property="Width" Value="250"/>
             <Setter Property="Height" Value="28"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
 
             <Style.Resources >
                 <Style TargetType="{x:Type Border}">
@@ -327,6 +331,8 @@
             <Setter Property="Height" Value="28"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            
 
 
             <Style.Resources >
